@@ -2,12 +2,10 @@ let tasks = [];
 let counter = 1;
 
 exports.getTasks = (req, res) => {
-    console.log("Hello");
     res.json(tasks);
 };
 
 exports.createTask = (req,res) => {
-    console.log("Hello");
     let {title} = req.body;
 
     if(!title){
@@ -20,7 +18,6 @@ exports.createTask = (req,res) => {
     };
 
     tasks.push(task);
-    console.log("Hello");
     
     res.json({
         message:"Task is created",
